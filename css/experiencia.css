@@ -1,6 +1,13 @@
+.experiencia {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
 .experiencia .subtitulo {
-  font-family: "Expletus Sans", 'Fira Sans', Arial;
-  font-weight: 700;
   color: #e0e0e0;
 }
 
@@ -12,7 +19,7 @@
   color: #525252;
 }
 
-.experiencia-texto .strong {
+.experiencia-texto strong {
   color: #141414;
 }
 
@@ -29,9 +36,10 @@
 
 .empresa::before {
   content: "";
+  display: block;
   width: 4px;
   height: 20px;
-  background: linear-gradient(#ce62f4, #9a1bd6);
+  background: linear-gradient(#b6f829, #67dd0a);
   position: absolute;
   top: 20px;
   left: -4px;
@@ -40,21 +48,23 @@
 .empresa-ano {
   position: absolute;
   top: 22px;
-  left: -48px;
-  font-size: 0.875rem;
+  left: -100px;
+  text-align: right;
+  width: 80px;
   color: #525252;
+  font-size: 0.875rem;
 }
 
 .empresa-titulo {
   font-size: 1.125rem;
-  font-weight: bold;
   line-height: 1.1;
+  font-weight: bold;
 }
 
 .empresa-texto {
   font-size: 0.875rem;
-  color: #525252;
   line-height: 1.4;
+  color: #525252;
 }
 
 .empresa-habilidades {
@@ -68,32 +78,8 @@
   font-size: 0.875rem;
   line-height: 1.4;
   border-radius: 4px;
-  background: #fff;
+  background: #ffffff;
   padding: 5px 10px;
-  position: relative;
-}
-
-.empresa-habilidades li::before {
-  content: "";
-  width: 4px;
-  height: 8px;
-  background: linear-gradient(#ce62f4, #9a1bd6);
-
-  position: absolute;
-  top: 10px;
-  left: -4px;
-}
-
-.empresa-habilidades .html::before {
-  background: linear-gradient(#f6c159, #ef9309);
-}
-
-.empresa-habilidades .css::before {
-  background: linear-gradient(#20b3e1, #2475a3);
-}
-
-.empresa-habilidades .js::before {
-  background: linear-gradient(#ede284, #baab23);
 }
 
 @media (max-width: 800px) {
@@ -101,37 +87,21 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
-
   .experiencia .subtitulo {
-    text-align: center;
     color: #141414;
   }
-
   .experiencia-texto {
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0 auto 40px auto;
+    font-size: 1.25rem;
   }
-
   .empresa-ano {
     position: initial;
     order: 1;
+    width: initial;
+    text-align: left;
   }
-
-  .empresa-ano::before {
-    content: "Ano: ";
-  }
-} 
+}
 
 @media (max-width: 400px) {
-  .experiencia .subtitulo {
-    font-size: 2rem;
-  }
-
-  .experiencia-texto {
-    font-size: 1rem;
-  }
-
   .empresa {
     grid-template-columns: 1fr;
   }
